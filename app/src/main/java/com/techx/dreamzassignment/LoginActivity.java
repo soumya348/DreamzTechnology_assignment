@@ -35,19 +35,18 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if( TextUtils.isEmpty(strUserName) && TextUtils.isEmpty(strPassword)){
-//                   if(user.equals(strUserName) && pass.equals(strPassword)){
-//                       startActivity(new Intent(getApplicationContext(), HomeActivity.class));
-//                       finish();
-//                   }
-//                   else {
-//                       Toast.makeText(LoginActivity.this,"please enter correct details or register",Toast.LENGTH_LONG).show();
-//                   }
-//
-//                }else {
-//                    Toast.makeText(LoginActivity.this,"please fill all the details",Toast.LENGTH_LONG).show();
-//                }
-                startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                if( TextUtils.isEmpty(strUserName) && TextUtils.isEmpty(strPassword)){
+                   if(user.equals(strUserName) && pass.equals(strPassword)){
+                       startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                       finish();
+                   }
+                   else {
+                       Toast.makeText(LoginActivity.this,"please enter correct details or register",Toast.LENGTH_LONG).show();
+                   }
+
+                }else {
+                    Toast.makeText(LoginActivity.this,"please fill all the details",Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
